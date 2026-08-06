@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Endereço</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"></head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <form action="/cadastrar" method="POST">
+
+                <h1>Cadastro de Endereço</h1>
+
+                <h4>CEP</h4>
+                <input type="text" name="cep" id="cep" placeholder="00000-000" required>
+
+                <h4>Logradouro</h4>
+                <input type="text" name="logradouro" id="logradouro" required>
+
+                <h4>Bairro</h4>
+                <input type="text" name="bairro" id="bairro" required>
+
+                <h4>Cidade</h4>
+                <input type="text" name="cidade" id="cidade" required>
+
+                <h4>Estado</h4>
+                <input type="text" name="estado" id="estado" required>
+
+                <h4>Região</h4>
+                <input type="text" name="regiao" id="regiao" required>
+
+                <h4>Número</h4>
+                <input type="number" name="numero" id="numero" required>
+
+                <button type="submit">Cadastrar</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>    
+
+</body>
+
+</html>
