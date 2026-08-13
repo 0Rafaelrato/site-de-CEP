@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Endereço</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <form id="formEndereco">
+
+                <h1>Cadastro de Endereço</h1>
+
+                <h4>CEP</h4>
+                <input
+                    type="text"
+                    id="cep"
+                    name="cep"
+                    placeholder="00000-000"
+                    maxlength="9"
+                    autocomplete="postal-code"
+                    required
+                >
+
+                <h4>Logradouro</h4>
+                <input
+                    type="text"
+                    id="logradouro"
+                    name="logradouro"
+                    required
+                >
+
+                <h4>Bairro</h4>
+                <input
+                    type="text"
+                    id="bairro"
+                    name="bairro"
+                    required
+                >
+
+                <h4>Cidade</h4>
+                <input
+                    type="text"
+                    id="cidade"
+                    name="cidade"
+                    required
+                >
+
+                <h4>Estado</h4>
+                <input
+                    type="text"
+                    id="estado"
+                    name="estado"
+                    required
+                >
+
+                <h4>Região</h4>
+                <input
+                    type="text"
+                    id="regiao"
+                    name="regiao"
+                    required
+                >
+
+                <h4>Número</h4>
+                <input
+                    type="number"
+                    id="numero"
+                    name="numero"
+                    required
+                >
+
+                <button type="button" id="salvar">
+                    Salvar informações
+                </button>
+
+                <button type="button" id="cadastrar">
+                    Cadastrar no MySQL
+                </button>
+
+                <button type="button" id="limpar">
+                    Limpar informações
+                </button>
+
+                <p id="mensagem"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+
+</html>
